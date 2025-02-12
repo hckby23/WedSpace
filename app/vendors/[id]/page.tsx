@@ -3,7 +3,7 @@
 import { useState, useEffect, use } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { MapPin, Phone, Calendar, ShoppingCart } from 'lucide-react';
+import { MapPin, Phone, Calendar } from 'lucide-react';
 import { supabase } from '@/lib/supabase-config';
 import { useAddToCart } from '@/hooks/use-add-to-cart';
 

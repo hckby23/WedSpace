@@ -3,7 +3,7 @@
 import Image from "next/image";
 import SearchBar from "@/components/search-bar";
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase-config";
 import Link from "next/link";
 import { Building2, Users } from "lucide-react";
 

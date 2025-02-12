@@ -24,8 +24,8 @@ export function LoginDialog({ isOpen, onOpenChange }: { isOpen: boolean; onOpenC
 
       if (error) throw error;
       onOpenChange(false);
-    } catch (error) {
-      setError(error.message);
+    } catch (error: any) {
+      setError(error?.message || 'An error occurred during login');
     } finally {
       setLoading(false);
     }
