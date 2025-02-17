@@ -93,21 +93,21 @@ export default function Home() {
 
         {/* Featured Sections */}
         <div className="relative bg-[#0f172a]/95 backdrop-blur-lg">
-          <div className="container mx-auto px-4 md:px-6 py-16 md:py-32">
+          <div className="container mx-auto px-3 sm:px-4 md:px-6 py-12 md:py-32">
             {/* Featured Venues */}
             <div className="mb-32 text-center">
-              <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-3 justify-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-12 flex items-center gap-2 md:gap-3 justify-center">
                 <Building2 className="w-8 h-8 text-[#ff6b6b]" />
                 Featured Venues
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-6xl mx-auto px-3 sm:px-0">
                 {featuredVenues.map((venue) => (
                   <Link
                     href={`/venues/${venue.id}`}
                     key={venue.id}
-                    className="group bg-[#1e293b] rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
+                    className="group bg-[#1e293b] rounded-lg sm:rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 shadow-lg"
                   >
-                    <div className="relative h-40 md:h-48">
+                    <div className="relative h-36 sm:h-40 md:h-48">
                       <Image
                         src={venue.image_url}
                         alt={venue.name}
@@ -115,8 +115,8 @@ export default function Home() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="p-4 md:p-6">
-                      <h3 className="text-lg md:text-xl font-semibold text-white mb-2">{venue.name}</h3>
+                    <div className="p-3 sm:p-4 md:p-6">
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-1.5 sm:mb-2">{venue.name}</h3>
                       <div className="flex items-center justify-between text-gray-400">
                         <span className="flex items-center gap-2">
                           <Users className="w-4 h-4" />
@@ -132,18 +132,18 @@ export default function Home() {
 
             {/* Featured Vendors */}
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-3 justify-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-12 flex items-center gap-2 md:gap-3 justify-center">
                 <Users className="w-8 h-8 text-[#ffd93d]" />
                 Featured Vendors
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-6xl mx-auto px-3 sm:px-0">
                 {featuredVendors.map((vendor) => (
                   <Link
                     href={`/vendors/${vendor.id}`}
                     key={vendor.id}
-                    className="group bg-[#1e293b] rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
+                    className="group bg-[#1e293b] rounded-lg sm:rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 shadow-lg"
                   >
-                    <div className="relative h-40 md:h-48">
+                    <div className="relative h-36 sm:h-40 md:h-48">
                       <Image
                         src={vendor.image_url}
                         alt={vendor.name}
@@ -151,8 +151,8 @@ export default function Home() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="p-4 md:p-6">
-                      <h3 className="text-lg md:text-xl font-semibold text-white mb-2">{vendor.name}</h3>
+                    <div className="p-3 sm:p-4 md:p-6">
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-1.5 sm:mb-2">{vendor.name}</h3>
                       <div className="flex items-center justify-between text-gray-400">
                         <span className="text-[#ffd93d]">{vendor.category}</span>
                         <span>{vendor.location}</span>

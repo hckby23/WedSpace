@@ -39,13 +39,13 @@ function Header() {
           {/* Right Section */}
           <div className="flex items-center ml-auto">
             {/* Venues and Vendors */}
-            <div className="flex items-center gap-2 sm:gap-3 md:gap-5 mr-4 md:mr-6">
-              <Link href="/venues" className="text-gray-200 hover:text-white transition-colors px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm sm:text-base md:text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-1 sm:gap-2 md:gap-3">
-                <Building2 className="w-5 h-5 md:w-6 md:h-6" />
+            <div className="hidden md:flex items-center gap-5 mr-6">
+              <Link href="/venues" className="text-gray-200 hover:text-white transition-colors px-6 py-3 text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-3">
+                <Building2 className="w-6 h-6" />
                 Venues
               </Link>
-              <Link href="/vendors" className="text-gray-200 hover:text-white transition-colors px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm sm:text-base md:text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-1 sm:gap-2 md:gap-3">
-                <Users className="w-5 h-5 md:w-6 md:h-6" />
+              <Link href="/vendors" className="text-gray-200 hover:text-white transition-colors px-6 py-3 text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-3">
+                <Users className="w-6 h-6" />
                 Vendors
               </Link>
             </div>
@@ -54,7 +54,7 @@ function Header() {
             <div className="flex items-center gap-4">
               <Link 
                 href="/search" 
-                className="text-gray-200 hover:text-white transition-colors p-3 rounded-lg hover:bg-[rgba(255,255,255,0.1)]"
+                className="hidden md:block text-gray-200 hover:text-white transition-colors p-3 rounded-lg hover:bg-[rgba(255,255,255,0.1)]"
               >
                 <Search className="w-6 h-6" />
               </Link>
@@ -71,7 +71,7 @@ function Header() {
               </Link>
               <button 
                 onClick={() => setIsLoginOpen(true)}
-                className="text-gray-200 hover:text-white transition-colors p-3 rounded-lg hover:bg-[rgba(255,255,255,0.1)]"
+                className="hidden md:block text-gray-200 hover:text-white transition-colors p-3 rounded-lg hover:bg-[rgba(255,255,255,0.1)]"
               >
                 <User className="w-6 h-6" />
               </button>
