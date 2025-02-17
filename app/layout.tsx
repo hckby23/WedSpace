@@ -23,14 +23,14 @@ function Header() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1e293b] border-b border-gray-700 h-24">
-      <div className="container mx-auto h-full">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1e293b] border-b border-gray-700 h-16 md:h-24">
+      <div className="container mx-auto h-full px-4">
         <div className="flex items-center h-full">
           {/* Left Section */}
-          <div className="flex items-center gap-2 pl-2">
+          <div className="flex items-center gap-2">
             <Sidebar />
             {/* Logo */}
-            <Link href="/" className="text-5xl font-bold flex items-center">
+            <Link href="/" className="text-3xl md:text-5xl font-bold flex items-center">
               <span className="text-[#ff6b6b]">wed</span>
               <span className="text-[#ffd93d]">space</span>
             </Link>
@@ -39,13 +39,13 @@ function Header() {
           {/* Right Section */}
           <div className="flex items-center ml-auto">
             {/* Venues and Vendors */}
-            <div className="flex items-center gap-5 mr-6">
-              <Link href="/venues" className="text-gray-200 hover:text-white transition-colors px-6 py-3 text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-3">
-                <Building2 className="w-6 h-6" />
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-5 mr-4 md:mr-6">
+              <Link href="/venues" className="text-gray-200 hover:text-white transition-colors px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm sm:text-base md:text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-1 sm:gap-2 md:gap-3">
+                <Building2 className="w-5 h-5 md:w-6 md:h-6" />
                 Venues
               </Link>
-              <Link href="/vendors" className="text-gray-200 hover:text-white transition-colors px-6 py-3 text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-3">
-                <Users className="w-6 h-6" />
+              <Link href="/vendors" className="text-gray-200 hover:text-white transition-colors px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm sm:text-base md:text-lg font-medium rounded-lg hover:bg-[rgba(255,255,255,0.1)] flex items-center gap-1 sm:gap-2 md:gap-3">
+                <Users className="w-5 h-5 md:w-6 md:h-6" />
                 Vendors
               </Link>
             </div>
@@ -100,7 +100,7 @@ export default function RootLayout({
         <CartProvider>
           <Header />
           {/* Main Content */}
-          <main className="pt-24 container mx-auto p-6 md:p-12 lg:p-24">
+          <main className="pt-16 md:pt-24 container mx-auto p-4 md:p-6 lg:p-12">
             <div className="max-w-5xl mx-auto">
               {children}
             </div>

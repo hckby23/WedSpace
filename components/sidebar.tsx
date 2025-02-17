@@ -46,7 +46,7 @@ export function Sidebar() {
       {/* Sidebar panel */}
       <div 
         id="sidebar-panel"
-        className={`fixed left-0 top-0 h-screen w-[320px] bg-[#0f172a] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed left-0 top-0 h-screen w-[280px] sm:w-[320px] bg-[#0f172a] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         style={{ backgroundColor: '#0f172a' }}
@@ -55,7 +55,7 @@ export function Sidebar() {
           {/* Logo Section */}
           <div className="px-8 py-7 border-b border-[rgba(255,255,255,0.1)] bg-[#0f172a]">
             <div className="flex justify-end pr-6">
-              <Link href="/" className="text-4xl font-bold flex items-center" onClick={() => setIsOpen(false)}>
+              <Link href="/" className="text-3xl sm:text-4xl font-bold flex items-center" onClick={() => setIsOpen(false)}>
                 <span className="text-[#ff6b6b]">wed</span>
                 <span className="text-[#ffd93d]">space</span>
               </Link>
@@ -133,7 +133,7 @@ export function Sidebar() {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }} 
-        className="fixed top-7 left-6 z-50 p-3 hover:bg-[rgba(255,255,255,0.1)] rounded-full transition-colors"
+        className="fixed top-4 md:top-7 left-4 md:left-6 z-50 p-2 md:p-3 hover:bg-[rgba(255,255,255,0.1)] rounded-full transition-colors"
       >
         <Menu className="w-6 h-6 text-white" />
       </button>

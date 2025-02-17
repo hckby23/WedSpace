@@ -80,34 +80,34 @@ export default function Home() {
       {/* Content Wrapper */}
       <div className="relative">
         {/* Hero Content */}
-        <div className="min-h-screen flex flex-col items-center justify-center text-center p-4 -mt-24">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-[#ff6b6b] to-[#ffd93d] text-transparent bg-clip-text leading-tight tracking-tight">
+        <div className="min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center text-center p-4 -mt-12 md:-mt-24">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-[#ff6b6b] to-[#ffd93d] text-transparent bg-clip-text leading-tight tracking-tight px-4">
             Find your Dream Venue
           </h1>
           
           {/* Search Container with Glass Effect */}
-          <div className="max-w-2xl w-full mx-auto bg-[rgba(15,23,42,0.7)] backdrop-blur-lg p-10 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl">
+          <div className="max-w-2xl w-full mx-auto bg-[rgba(15,23,42,0.7)] backdrop-blur-lg p-6 md:p-10 rounded-2xl md:rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl mx-4">
             <SearchBar />
           </div>
         </div>
 
         {/* Featured Sections */}
         <div className="relative bg-[#0f172a]/95 backdrop-blur-lg">
-          <div className="container mx-auto px-6 py-32">
+          <div className="container mx-auto px-4 md:px-6 py-16 md:py-32">
             {/* Featured Venues */}
             <div className="mb-32 text-center">
               <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-3 justify-center">
                 <Building2 className="w-8 h-8 text-[#ff6b6b]" />
                 Featured Venues
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
                 {featuredVenues.map((venue) => (
                   <Link
                     href={`/venues/${venue.id}`}
                     key={venue.id}
                     className="group bg-[#1e293b] rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
                   >
-                    <div className="relative h-48">
+                    <div className="relative h-40 md:h-48">
                       <Image
                         src={venue.image_url}
                         alt={venue.name}
@@ -115,8 +115,8 @@ export default function Home() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-2">{venue.name}</h3>
+                    <div className="p-4 md:p-6">
+                      <h3 className="text-lg md:text-xl font-semibold text-white mb-2">{venue.name}</h3>
                       <div className="flex items-center justify-between text-gray-400">
                         <span className="flex items-center gap-2">
                           <Users className="w-4 h-4" />
@@ -136,14 +136,14 @@ export default function Home() {
                 <Users className="w-8 h-8 text-[#ffd93d]" />
                 Featured Vendors
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
                 {featuredVendors.map((vendor) => (
                   <Link
                     href={`/vendors/${vendor.id}`}
                     key={vendor.id}
                     className="group bg-[#1e293b] rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
                   >
-                    <div className="relative h-48">
+                    <div className="relative h-40 md:h-48">
                       <Image
                         src={vendor.image_url}
                         alt={vendor.name}
@@ -151,8 +151,8 @@ export default function Home() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-2">{vendor.name}</h3>
+                    <div className="p-4 md:p-6">
+                      <h3 className="text-lg md:text-xl font-semibold text-white mb-2">{vendor.name}</h3>
                       <div className="flex items-center justify-between text-gray-400">
                         <span className="text-[#ffd93d]">{vendor.category}</span>
                         <span>{vendor.location}</span>
