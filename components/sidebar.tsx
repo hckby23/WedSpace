@@ -46,7 +46,7 @@ export function Sidebar() {
       {/* Sidebar panel */}
       <div 
         id="sidebar-panel"
-        className={`fixed left-0 top-0 h-screen w-[280px] sm:w-[320px] bg-[#0f172a] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed left-0 top-16 md:top-24 h-[calc(100vh-4rem)] md:h-[calc(100vh-6rem)] w-[280px] sm:w-[320px] bg-[#0f172a] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         style={{ backgroundColor: '#0f172a' }}
