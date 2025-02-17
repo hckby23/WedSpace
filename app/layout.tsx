@@ -1,5 +1,6 @@
 "use client";
 
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
@@ -108,6 +109,7 @@ export default function RootLayout({
           {/* Footer */}
           <Footer />
           <Toaster position="top-center" richColors />
+          <Analytics />
         </CartProvider>
       </body>
     </html>
